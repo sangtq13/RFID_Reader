@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        applicationId "com.thingmagic.rfidreader"
+        minSdkVersion 12
+        targetSdkVersion 26
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/d2xx.jar')
+    compile files('libs/jmdns-3.4.1.jar')
+    compile files('libs/ltkjava-1.0.0.6.jar')
+    compile files('libs/mercuryapi.jar')
+    implementation files('libs/commons-codec-1.7.jar')
+    implementation files('libs/MYG2EPC.jar')
+    //    compile com.android.support:appcompat-v7:27.1.0
+    implementation files('libs/commons-lang-2.5.jar')
+}

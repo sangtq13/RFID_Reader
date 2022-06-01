@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ServiceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RadioGroup
+            android:id="@+id/search_radio_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/SyncRead_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:checked="true"
+                android:text="@string/SyncRead" />
+
+            <RadioButton
+                android:id="@+id/AsyncRead_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:checked="false"
+                android:text="@string/AsyncRead" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/Read_button"
+                style="?android:attr/buttonStyleInset"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="0.1"
+                android:layout_below="@id/progressbar"
+                android:height="10dp"
+                android:text="@string/Read" />
+
+            <Button
+                android:id="@+id/Clear"
+                style="?android:attr/buttonStyleInset"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="0.1"
+                android:paddingRight="10dp"
+                android:layout_below="@id/progressbar"
+                android:layout_toRightOf="@id/Read_button"
+                android:text="@string/Clear" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/search_result_view"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|bottom"
+                android:layout_weight="0.5"
+                android:text="@string/Search_Result" />
+
+            <TextView
+                android:id="@+id/totalTagCount_view"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|bottom"
+                android:layout_weight="0.5"
+                android:text="" />
+        </LinearLayout>
+
+        <include
+            layout="@layout/tag_result_view"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

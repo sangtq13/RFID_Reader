@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TabWidget
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+            <FrameLayout
+                android:id="@+id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <RelativeLayout
+                    android:id="@+id/tab_read"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/read_layout"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/tab_write"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <include layout="@layout/write_layout"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/tab_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <include layout="@layout/search_layout"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</RelativeLayout>

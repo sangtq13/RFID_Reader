@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/tablelayoutSearchHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/table_style" >
+
+        <TableRow
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tagSearchResultHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_style" >
+
+            <TextView
+                android:id="@+id/searchSNOLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:background="@drawable/table_style"
+                android:gravity="center"
+                android:minWidth="15dp"
+                android:padding="3dp"
+                android:text="@string/SNO"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/searchEPCLabel"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:background="@drawable/table_style"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/EPC"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            
+
+            <TextView
+                android:id="@+id/searchCOUNTLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:background="@drawable/table_style"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/COUNT"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/searchRSSILabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:background="@drawable/table_style"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/RSSI"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableLayout
+            android:id="@+id/tablelayoutSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_style" >
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
+
+    <!-- </HorizontalScrollView> -->
